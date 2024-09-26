@@ -10,7 +10,8 @@ echo  \      /
 echo.
 echo 1. Delete files in temporary folders
 echo 2. Option 2
-echo 3. Exit
+echo 3. Disable Windows Telemetry(tested in Windows 11 only)
+echo 4. Exit
 
 set /p choice=Choose an option: 
 
@@ -31,6 +32,28 @@ goto menu
 :option2
 echo Going into site...
 open https://github.com/ByteBench-dev/windows_cleaner
+pause
+goto menu
+
+:option3 
+echo Disabling Windows Telemetry...
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
+echo Telemetry disabled! Disabling more telemetry...
+@echo off
+
+taskkill /im diagtrack.exe /f
+
+echo " " > C:\ProgramData\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl
+cacls C:\ProgramData\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl /D SYSTEM
+
+sc stop DiagTrack
+sc config DiagTrack start= disabled
+
+sc stop WbioSrvc
+sc config WbioSrvc start= disabled
+
+sc stop lfsvc
+sc config lfsvc start= disabled
 pause
 goto menu
 

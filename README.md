@@ -15,6 +15,6 @@ The script will execute the chosen option and return to the menu.
 
 **Future updates**
 
-1) Adding an option to disable windows telemetry.
+~~1) Adding an option to disable windows telemetry.~~
 2) Adding more optimisation options in the menu.
 3) Adding more things like common optimisations programs do.
