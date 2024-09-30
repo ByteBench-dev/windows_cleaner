@@ -1,6 +1,6 @@
 **Introduction**
 
-This Windows Cleaner script is a simple batch script designed to delete temporary files from  system Temp folder. The script provides a menu-driven interface for the user to choose from various options.
+This Windows Cleaner script is a simple batch script designed to optimize and remove telemetry to the user's OS. The script provides a menu-driven interface for the user to choose from various options.
 
 **Features**
 
