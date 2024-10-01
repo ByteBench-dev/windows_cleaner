@@ -11,7 +11,8 @@ echo.
 echo 1. Delete files in temporary folders
 echo 2. Disable Windows Telemetry(tested in Windows 11 only)
 echo 3. Optimize C: Disk
-echo 4. Exit
+echo 4. Restore system files
+echo 5. Exit
 
 set /p choice=Choose an option: 
 
@@ -19,6 +20,7 @@ if %choice%==1 goto option1
 if %choice%==2 goto option2
 if %choice%==3 goto option3
 if %choice%==4 goto option4
+if %choice%==5 goto option5
 
 goto menu
 
@@ -71,4 +73,8 @@ pause
 goto menu
 
 :option4
+
+sfc /scannow
+
+:option5
 Exit
