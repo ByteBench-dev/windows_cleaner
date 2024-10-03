@@ -4,7 +4,7 @@ This Windows Cleaner script is a simple batch script designed to optimize and re
 
 **Features**
 
-This script deletes files in the user's Temp folder (%temp%).
+This script optimizes user's OS from varius things. 
 
 **Usage**
 
@@ -16,5 +16,7 @@ The script will execute the chosen option and return to the menu.
 **Future updates**
 
 **Adding an option to disable windows telemetry.(Done)**
-2) Adding more optimisation options in the menu.
-3) Adding more things like common optimisations programs do.
+**Adding more optimisation options in the menu.(Done)**
+**Adding more things like common optimisations programs do.(Done)**
+
+If anyone wants to contribute by testing this script or helping me upgrade it write me on discord at my username hitman_47_d
